@@ -1,0 +1,117 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gitanshu Impex Pvt. Ltd.</title>
+    <link type="text/css" rel = "stylesheet" href = "w3.css">
+    <link type="text/css" rel = "stylesheet" href = "products.css">
+    <link type="text/css" rel = "stylesheet" href = "navbar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #sidebar_open
+        {
+            display: block;
+        }
+    </style>
+</head>
+<body id = "w3_override">
+    <section id = "main_container">
+        <nav class = "fixed-nav-container">
+            <div id = "nav_content">
+            <div class = "sidebar w3-hide-large">
+                <div>
+                    <button id = "sidebar_button">
+                        <img src = "Images/hamburger.png">
+                    </button>
+                        <ul id = "sidebar_open">
+                            <li><button id = "sbb_1" onClick = "sidebar_clicked(this.id)">ABOUT US</button></li>
+                            <li><button id = "sbb_2" onClick = "sidebar_clicked(this.id)">PRODUCTS</button></li>
+                            <li><button id = "sbb_3" onClick = "sidebar_clicked(this.id)">QUERY</button></li>
+                            <li><button id = "sbb_4" onClick = "sidebar_clicked(this.id)">WHY GIPL?</button></li>
+                            <li><button id = "sbb_5" onClick = "sidebar_clicked(this.id)">CONTACT US</button></li>
+                        </ul>       
+                    </div>
+                </div>
+            
+            <div class = "logo">GIPL</div>
+            <div class = "desktop w3-hide-medium w3-hide-small">
+                <ul>
+                    <li><button>ABOUT US</button></li>
+                    <li><button>PRODUCTS</button></li>
+                    <li><button>QUERY</button></li>
+                    <li><button>WHY GIPL?</button></li> 
+                    <li><button>CONTACT US</button></li>
+                </ul>
+            </div>
+                </div>
+        </nav>
+        <div id = "rest_container">
+            <div id = "categories">
+                <div id = "overview">
+                    <img src = "Images/ship2.jpg">
+                    <h3>CATEGORIES</h3>
+                </div>
+                <button id = "leftscroll"> &larr; </button>
+                <button id = "rightscroll"> &rarr; </button>
+                <ul id = "category_scroll">
+                    <li>
+                        <img src = "Images/tbars.jpg">
+                        <div>
+                            <div class = "category_title">
+                                T-BARS
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src = "Images/shafting.jpg">
+                        <div>
+                            <div class = "category_title">
+                            SHAFTING</div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src = "Images/metal.jpg">
+                        <div>
+                            <div class = "category_title">
+                                METAL PARTS
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img  src= "Images/footwear.jpg">
+                        <div>
+                            <div class = "category_title">FOOTWEAR</div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src = "Images/cereals.jpg">
+                        <div>
+                            <div class = "category_title">CEREALS</div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src = "Images/gita.jpeg">
+                        <div>
+                            <div class = "category_title">Chaman</div>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src = "navbar.js"></script>
+    <script>
+        sidebar_clicked("sbb_2");
+        $(document).ready(function(){
+            $("#leftscroll").click(function(){
+                $("#category_scroll").animate({scrollLeft: '-=600'}, 500, "swing");
+            });
+        });
+        $(document).ready(function(){
+            $("#rightscroll").click(function(){
+                $("#category_scroll").animate({scrollLeft: '+=600'}, 500, "swing");
+            });
+        });
+    </script>
+</body>
+</html>
