@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: myFirstFont;
   src: url('Arimo-Bold.ttf');
   font-weight: 700;
@@ -104,7 +104,7 @@ nav
 #nav_content ul
 {
     float: right;
-    margin:0;
+    margin: 0;
     box-sizing: border-box;
     height: 3rem;
 }
@@ -146,7 +146,7 @@ nav
     border: 2px solid black;
     color:white;
     background-position: left bottom;
-}
+}*/
 #rest_container
 {
     margin-top: 3.5rem;

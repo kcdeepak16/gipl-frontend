@@ -7,6 +7,8 @@
 {
     margin-top: 3.5rem;
     position: relative;
+    max-width: 1378px;
+    margin: 0 auto;
 }
 body
 {
@@ -18,11 +20,11 @@ html
 }
 #categories
 {
-    height: 100%;
+    height: 80%;
 }
 #overview
 {
-    height: 50%;
+    height: 62.5%;
     background: black;
 }
 #overview img
@@ -36,41 +38,54 @@ html
 #overview h3
 {
     position: absolute;
-    top: 10%;
+    top: 10vh;
     left: 50%;
     transform: translate(-50%,-50%);
+    text-align: center;
     color: white;
     font-weight:500;
 }
+#category_section
+{
+    position: absolute;
+    top: 30vh;
+    width: 100%;
+    height: 40vh; 
+}
 #categories ul
 {
-    top: 32.8%;
     right:0;
     left:0;
     bottom: 0;
     width: 85%;
+    height: 100%;
     margin: 0 auto;
     overflow-x: scroll;
     white-space: nowrap;
     padding: 0;
-    position: absolute;
+}
+#categories ul a
+{
+    cursor: pointer;
 }
 #categories li
 {
     display: inline-block;
     box-sizing: content-box;
     width: 10rem;
-    height: 15rem;
+    height: 100%;
     margin: 0 4rem;
-    background: black;
+
 }
 #categories li img
 {
+    border-radius: 10px 10px 0 0;
     height: 50%;
     width: 100%;
 }
 #categories li div
 {
+    border-radius: 0 0 10px 10px;
     height: 50%;
     background: #f5f5f5;
 }
@@ -93,21 +108,102 @@ html
 {
     width: 3rem;
     background: transparent;
-    background: black;
-    border-radius: 50%;
+    height: 100%;
     padding: 0;
     color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+#leftscroll img
+{
+    transform: rotate(180deg);
+}
+#leftscroll img, #rightscroll img
+{
+    margin: auto 0;
+    height: 15%;
 }
 #leftscroll
 {
-    position: absolute;
-    top: 48%;
+    position: absolute
 }
 #rightscroll
 {
     position: absolute;
-    top: 48%;
     right: 0;
+}
+#products_section
+{
+    width: 80%;
+    margin: 0 auto;
+}
+#products ul
+{
+    padding: 0;
+    text-align: center;
+}
+#products_section li
+{
+    display: inline-block;
+    height: 20rem;
+    width: 12rem;
+    background: transparent;
+    border: 1px solid transparent;
+    margin: 0 1.6rem;
+    margin-bottom: 4rem;;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    transition: .3s;
+    border-radius: 10px;
+    z-index: 10;
+}
+#products_section li:hover {
+  box-shadow: 0px 20px 40px rgba(0,0,0,0.4);
+  transform: scale(1.05,1.05);
+}
+.product img
+{
+    width: 100%;
+    height: 50%;
+    border: none;
+    outline: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.product div
+{
+    height:50%;
+    background: transparent;
+}
+.product_name
+{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    height: 50%;
+}
+.addtoq
+{
+    width: 60%;
+    height: 1.5rem;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    font-size: .7rem;
+    background: black;
+    font-family: mySecondFont;
+    color: white;
+    cursor: pointer;
+}
+.product_des
+{
+    font-size: .8rem;
+    opacity: .8;
+}
+#products_section h2
+{
+    text-align: center;
+    margin-bottom: 3rem;
 }
 @media only screen and (max-width: 600px)
 {
@@ -115,10 +211,15 @@ html
     {
         font-size: 75%;
     }
+    #category_section
+    {
+        height: 30vh;
+        top: 35vh;
+    }
     #categories ul
     {
         width: 90%;
-        top: 36.6%;
+        /*top: 36.9%;*/
     }
     #categories li
     {
@@ -128,5 +229,25 @@ html
     {
         display: none;
     }
+    #products_section
+    {
+        width: 100%;
+    }
+    #products li
+    {
+        margin: 0.5rem;
+    }
     
+}
+@media only screen and (min-width: 600px) and (max-width:1000px)
+{
+    #categories ul
+    {
+        width: 90%;
+    }
+    #category_section
+    {
+        height: 30vh;
+        top: 35vh;   
+    }
 }

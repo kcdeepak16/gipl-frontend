@@ -49,58 +49,91 @@
                     <img src = "Images/ship2.jpg">
                     <h3>CATEGORIES</h3>
                 </div>
-                <button id = "leftscroll"> &larr; </button>
-                <button id = "rightscroll"> &rarr; </button>
+                <div id = "category_section">
+                <button id = "leftscroll"> <img src= "Images/arrhead.png"></button>
+                <button id = "rightscroll"><img src= "Images/arrhead.png"> </button>
                 <ul id = "category_scroll">
-                    <li>
+                    <a><li>
                         <img src = "Images/tbars.jpg">
                         <div>
                             <div class = "category_title">
                                 T-BARS
                             </div>
                         </div>
-                    </li>
-                    <li>
+                    </li></a>
+                    <a><li>
                         <img src = "Images/shafting.jpg">
                         <div>
                             <div class = "category_title">
                             SHAFTING</div>
                         </div>
-                    </li>
-                    <li>
+                        </li></a>
+                    <a><li>
                         <img src = "Images/metal.jpg">
                         <div>
                             <div class = "category_title">
                                 METAL PARTS
                             </div>
                         </div>
-                    </li>
-                    <li>
+                        </li></a>
+                    <a><li>
                         <img  src= "Images/footwear.jpg">
                         <div>
                             <div class = "category_title">FOOTWEAR</div>
                         </div>
-                    </li>
-                    <li>
+                        </li></a>
+                    <a><li>
                         <img src = "Images/cereals.jpg">
                         <div>
                             <div class = "category_title">CEREALS</div>
                         </div>
-                    </li>
-                    <li>
+                        </li></a>
+                    <a><li>
                         <img src = "Images/gita.jpeg">
                         <div>
                             <div class = "category_title">Chaman</div>
                         </div>
-                    </li>
+                        </li></a>
+                </ul>
+            </div>
+        </div>
+        <div id = "products_section">
+            <div id = "products">
+                <h2>PRODUCTS
+                </h2>
+                <ul>
+                    <a><li class = "product"><img src = "Images/sneaker.png">
+                        <div><p class = "product_name">Sneakers<br><br><span class = "product_des">A soft shoe worn for sports or casual occasions; a trainer.</span></p><button class = "addtoq">+ ADD TO QUERIES</button></div></li></a>
+                    <a><li class = "product"><img>
+                        <div><p class = "product_name"></p><button class = "addtoq">+ ADD TO QUERIES</button></div></li></a>
+                    <a><li class = "product"><img>
+                        <div><p class = "product_name"></p><button class = "addtoq">+ ADD TO QUERIES</button></div></li></a>
+                    <a><li class = "product"><img>
+                        <div><p class = "product_name"></p><button class = "addtoq">+ ADD TO QUERIES</button></div></li></a>
+                    <a><li class = "product"><img>
+                        <div><p class = "product_name"></p><button class = "addtoq">+ ADD TO QUERIES</button></div></li></a>
+                    <a><li class = "product"><img>
+                        <div><p class = "product_name"></p><button class = "addtoq">+ ADD TO QUERIES</button></div></li></a>
+                    <a><li class = "product"><img>
+                        <div><p class = "product_name"></p><button class = "addtoq">+ ADD TO QUERIES</button></div></li></a>
+                    <a><li class = "product"><img>
+                        <div><p class = "product_name"></p><button class = "addtoq">+ ADD TO QUERIES</button></div></li></a>
+                    <a><li class = "product"><img>
+                        <div><p class = "product_name"></p><button class = "addtoq">+ ADD TO QUERIES</button></div></li></a>
                     
                 </ul>
             </div>
         </div>
+            </div>
     </section>
     <script src = "navbar.js"></script>
     <script>
         sidebar_clicked("sbb_2");
+        $(".addtoq").click(function(){
+            $(this).attr("background","transparent");
+            $(this).text("Added to Queries");
+            $(this).attr("color","black");
+        });
         $(document).ready(function(){
             $("#leftscroll").click(function(){
                 $("#category_scroll").animate({scrollLeft: '-=600'}, 500, "swing");

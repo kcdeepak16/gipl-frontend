@@ -2,14 +2,14 @@
   font-family: mySecondFont;
   src: url('ClearSans-Bold.ttf');
   font-weight: 700;
-}
+}   
 html
 {
     font-size: 16px;
 }
 body
 {
-    font-family: mySecondFont;
+    font-family: mySecondFont !important;
     padding: 0;
     margin: 0;
 }
@@ -23,7 +23,7 @@ nav
     z-index: 100;
     width: 100%;
     margin: 0 auto;
-    height: 3rem;
+    height: 3.3rem;
     background-color: white;
 }
 #sidebar_button img
@@ -43,13 +43,13 @@ nav
 }
 #sidebar_open button
 {
-    box-sizing: border-box;
+    font-family: mySecondFont !important;
     height: 2.5rem;  
+    padding: 0;
     background: white;
-    padding-right: 2px;
-    margin: auto;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    padding-right: 2px; 
+    border:  none;
+    margin-left: 2rem !important;
     float: right;
     border: none;
 }
@@ -57,14 +57,13 @@ nav
 {
     height: 3rem;
     width: 100%;
-    padding: 0 1rem;
-    margin: 0;
     overflow-x: scroll;
+    padding: 0;
     white-space: nowrap;
     background: white;
-    border: solid 2px white;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    border: solid .8rem white;
+    border-top: 0;
+    border-radius: 0 0 2rem 2rem;
     display: none;
 }
 ::-webkit-scrollbar
@@ -73,6 +72,7 @@ nav
 }
 #sidebar_open a
 {
+    padding: 0;
     text-decoration: none;
 }
 .sidebar li

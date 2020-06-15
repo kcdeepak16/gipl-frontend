@@ -4,10 +4,8 @@ function sidebar_clicked(clicked_id)
     {
         var def = "sbb_" + i;           
         document.getElementById(def).style.fontSize = "1rem";
-        document.getElementById(def).style.margin = "auto 3px";
     }
     document.getElementById(clicked_id).style.fontSize = "1.5rem";
-    document.getElementById(clicked_id).style.margin = "0";
     document.getElementById(clicked_id).style.outline = "none";
     
 }
